@@ -87,6 +87,11 @@ nav.main-nav {
   min-height: 50px;
 }
 
+.main-nav.sticky {
+  background-color: rgba(251, 76, 71, 0.14);
+  /* box-shadow: 0px 8px 107px 0px #0000001a; */
+}
+
 .main-nav .logo {
   display: flex;
   align-items: center;
@@ -781,6 +786,10 @@ nav.main-nav {
     -o-transition: all 0.8s ease-in-out;
   }
 
+  .nav-items {
+    opacity: 0;
+  }
+
   .nav-items .nav-links {
     color: #fff;
   }
@@ -810,6 +819,14 @@ nav.main-nav {
 
 .nav-list.show {
   top: 60px;
+}
+
+.menu.notShowMenu {
+  display: none;
+}
+
+.cancel-menu.notShowMenu {
+  display: block;
 }
 
 @media screen and (max-width: 800px) {
@@ -862,6 +879,11 @@ nav.main-nav {
   .question-form {
     width: 100%;
   }
+
+  .nav-list {
+    width: 60%;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 602px) {
@@ -881,6 +903,9 @@ nav.main-nav {
 }
 
 @media screen and (max-width: 500px) {
+  .nav-list {
+    width: 80%;
+  }
   .whatdo-feature img {
     width: 220px;
   }
@@ -957,6 +982,9 @@ nav.main-nav {
 }
 
 @media screen and (max-width: 390px) {
+  .nav-list {
+    width: 100%;
+  }
   .whatdo-feature .whatdo-content {
     grid-template-columns: 100%;
     justify-items: flex-start;
@@ -1008,5 +1036,25 @@ nav.main-nav {
 
   .mapping-container > div:last-child ul.list-reports > li div:first-child img {
     width: 30px;
+  }
+}
+
+/* animation */
+@keyframes slideY {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
   }
 }
